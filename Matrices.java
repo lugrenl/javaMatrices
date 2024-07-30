@@ -217,7 +217,7 @@ public class Matrices {
             for (int iRow = 0; iRow < nRows; iRow++) {
                 for (int iCol = 0; iCol < other.nCols; iCol++) {
                     for (int idx = 0; idx < other.nRows; idx++) {
-                        result.rows[iRow][iCol] = this.rows[iRow][idx] + other.rows[idx][iCol];
+                        result.rows[iRow][iCol] += this.rows[iRow][idx] * other.rows[idx][iCol];
                     }
                 }
             }
